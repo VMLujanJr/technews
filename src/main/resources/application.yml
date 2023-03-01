@@ -1,0 +1,25 @@
+# Pick a port
+server:
+  port: 8082
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/just_tech_news_java_db?useSSL=false&serverTimezone=UTC&createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true
+    username: ENC(ev2xTLDXSe6UhA0S4+zPYg==)
+    password: ENC(B3u/sVBFhvYXOTZ5g+TunTtZ3oASpNrt)
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties.hibernate.format_sql: true
+    properties.hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
+  # Spring Session Variables
+  session:
+    store-type: jdbc
+    jdbc:
+      initialize-schema: always
+    timeout: 600
+  h2:
+    console:
+      enabled: true
